@@ -1,0 +1,10 @@
+*{
+    margin:0;
+}
+
+nav{
+    background-color: #252525;
+    color: wheat;
+    display: flex;
+    justify-content: space-between;
+}
