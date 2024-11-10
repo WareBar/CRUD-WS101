@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            {% comment %} THIS IS WHERE THE TITLE GOES {% endcomment %}
+        {% endblock  %}
+    </title>
+</head>
+<body>
+
+    <nav>
+        <div class="brand">
+            <img src="" alt="">
+            <h1>WareBar's CookBook</h1>            
+        </div>
+        <input type="button" value="///">
+    </nav>
+
+
+    <main>
+        {% block content %}
+        {% endblock  %}
+    </main>
+
+    
+</body>
+</html>
