@@ -1,0 +1,292 @@
+*{
+	margin: 0;
+}
+
+::-webkit-scrollbar{
+    width: .5vw;
+}
+
+::-webkit-scrollbar-track{
+    background: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+
+  }
+
+
+
+body{
+	box-sizing: border-box;
+	height: 100vh;
+	width: 100%;
+	overflow: auto;
+}
+
+
+main{
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+
+nav{
+	background-color: #252525;
+	color: wheat;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+
+nav .nav-list{
+	display: flex;
+	gap: 20px;
+	list-style-type: none;
+}
+
+.nav-list a{
+	text-decoration: none;
+	color: wheat;
+	letter-spacing: 1/5px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+
+.mark{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.mark img{
+	height: 40px;
+	width: 40px;
+}
+
+
+.mirror{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(10, 10, 20, 0.5);
+	position: absolute;
+}
+
+#home-page{
+	background: url('../assets/bg.jpg');
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.content{
+	z-index: 10;
+	width: fit-content;
+	text-align: center;
+	padding: 20px;
+	font-weight: bolder;
+	font-size: 2em;
+	color: whitesmoke;
+}
+
+.content h3{
+	animation: glowing 3s infinite alternate;
+	transition: .3s;
+}
+
+@keyframes glowing{
+  from {
+    text-shadow: 0px 10px 10px black;
+
+  }
+  to {
+    text-shadow: 0px 10px 10px whitesmoke;
+  }
+}
+
+.content h3:hover{
+	transform: scale(1.2);
+}
+
+
+.content img{
+	animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);   
+
+  }
+}
+
+.content button{
+	border: unset;
+	font-weight: 600;
+	padding: 5px 15px;
+	letter-spacing: 2px;
+	border-radius: 4px;
+	transition: .3s;
+}
+
+.content button:hover{
+	background-color: darkred;
+	color: whitesmoke;
+}
+
+button a {
+	text-decoration: none;
+	color: #252525;
+}
+
+button a:hover{
+	color: whitesmoke;
+}
+
+
+.foods-container{
+    display: flex;
+    flex-wrap: wrap;
+
+    row-gap: 20px;
+    column-gap: 20px;
+    
+    width:fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+}
+
+
+.foods-container .food{
+
+    width: 200px;
+    /* border-radius: 5px; */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+    transition: .3s;
+
+
+}
+
+
+.food button{
+    background-color: #29bb89;
+    border: none;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.food a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.food h3{
+    margin: 20px 0px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #393e46;
+}
+
+
+.food .banner{
+
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1 / 1; /* Square container */
+
+  margin-bottom: 20px;
+}
+
+.banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+.food:hover{
+	transform: scale(1.1);
+}
+
+#food-recipe{
+	width: 80%;
+	margin: 20px auto;
+	text-align: center;
+	position: relative;
+}
+
+#food-recipe h1{
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid grey;
+}
+
+#food-recipe a{
+	position: absolute;
+	left: 20px;
+}
+
+
+.top{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 3em;
+	padding: 10px;
+}
+
+.metas{
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	width: fit-content;
+	border-right: 2px solid black;
+	padding: 15px;
+}
+
+.metas img{
+	height: 15em;
+	width: 10em;
+	object-fit: cover;
+	border-radius: 4px;
+
+}
+
+.metas p{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: left;
+
+	height: 100%;
+	width: 100%;
+}

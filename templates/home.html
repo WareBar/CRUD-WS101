@@ -1,0 +1,23 @@
+{% extends 'structure.html' %}
+
+
+{% block title %}
+	Home | CookBook
+{% endblock %}
+
+
+{% load static %}
+{% block content %}
+
+	<div class="mirror"></div>
+
+	<div id="home-page">
+		<div class="content">
+			<img src="{% static 'assets/CookBookBrand.png' %}" alt="">
+			<h3>Your Daily Dose of Delicious.</h3>
+			<button>
+				<a href="{% url 'FOOD:LIST' %}">SEE FOODS</a>
+			</button>
+		</div>
+	</div>
+{% endblock %}

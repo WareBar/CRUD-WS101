@@ -1,0 +1,48 @@
+{% extends "structure.html" %}
+
+
+
+{% block title %}
+	{{food.name}} | CookBook
+{% endblock %}
+
+
+{% block content %}
+	<div id="food-recipe">
+		<a href="{% url 'FOOD:LIST' %}">Back</a>
+		<h1>{{food.name}}</h1>
+
+
+		<div class="info-container">
+			<div class="top">
+
+			<div class="metas">
+				<img src="{{food.banner}}" alt="">
+				<p>
+					<span class="prep">{{food.preptime}} Preparation Time</span>
+					<span class="serve">Servings: {{food.servings}}</span>
+					<span class="type">Food: {{food.foodType}}</span>
+					<span class="price">Price: {{food.price}}</span>
+				</p>
+			</div>
+
+			<div class="ingre">
+				<h3>Recipe Ingredients</h3>
+				<p>{{food.ingredients}}</p>
+			</div>				
+			</div>
+
+			<div class="bottom">
+				<h3>Instructions</h3>
+				<p>{{food.instructions}}</p>
+			</div>
+
+
+
+
+		</div>
+
+
+
+	</div>	
+{% endblock %}

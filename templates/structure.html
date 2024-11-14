@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		{% block title %}
+			{# TITLE GOES HERE #}
+		{% endblock %}
+	</title>
+	{% load static %}
+	{% block style %}
+		<link rel="stylesheet" href="{% static 'styles/master.css' %}">
+	{% endblock %}
+
+</head>
+
+<body>
+
+<nav class="Navigation">
+	<div class="mark">
+		<img src="{% static 'assets/CookBookBrand.png' %}" alt="brand">
+		<h1>WareBar's Cook Book</h1>
+	</div>
+
+	<ul class="nav-list">
+		<li>
+			<a href="{% url 'HOME' %}">Home</a>
+		</li>
+	</ul>
+
+
+
+</nav>
+
+
+<main>
+	{% block content %}
+		{# CONTENT GOES HERE #}
+	{% endblock %}
+</main>
+
+	
+</body>
+
+</html>
